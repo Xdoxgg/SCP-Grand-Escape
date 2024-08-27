@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MovingControl : MonoBehaviour
 {
-    private float _moveSpeed = 5.0f;
+    [SerializeField]
+    private float _moveSpeed = 3.0f;
 
 
     private CharacterController _controller;
@@ -17,14 +18,19 @@ public class MovingControl : MonoBehaviour
         _controller = GetComponent<CharacterController>();//если я правильно помю это создание кортежа из параметров контроля
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        _stats=new Playerstats();
     }
 
     void Update()
     {
         //бег
-        if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl) && true)
+        if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina>=30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.S)&& !Input.GetKey(KeyCode.D))
         {
-
+            _moveSpeed = 6.0f;
+        }
+        else
+        {
+            _moveSpeed = 3.0f;
         }
 
 

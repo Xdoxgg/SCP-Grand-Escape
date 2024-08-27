@@ -9,8 +9,6 @@ public class Playerstats : MonoBehaviour
     private float _healthState;
     [SerializeField]
     private float _staminaState;
-    [SerializeField]
-    private bool _run;
 
 
     void Start()
@@ -19,23 +17,18 @@ public class Playerstats : MonoBehaviour
         _healthState = 100.0f;
     }
 
-
+    public Playerstats()
+    {
+        _staminaState = 100.0f;
+        _healthState = 100.0f;
+    }
     void Update()
     {
-        if (_staminaState >= 30)
-        {
-            _run = true;
-        }
-        else
-        {
-            _run = false;
-        }
+        
     }
 
-
-    bool Run
+    public float Stamina
     {
-        get { return _run; }
+        get { return _staminaState; }
     }
-
 }
