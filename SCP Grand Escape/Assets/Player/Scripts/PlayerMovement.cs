@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class MovingControl : MonoBehaviour
 {
-    [SerializeField]
     private float _moveSpeed = 3.0f;
+    [SerializeField]
     private CharacterController _controller;
-    [SerializeField]
     private Playerstats _stats;
-    private float _gravity = 3.0f;
-    [SerializeField]
+    private float _gravity = 2.0f;
     private Vector3 _velocity;
- 
-   
+    private float _jumpStrenght = 2.0f;
+    private bool _isSeat;
+
     void Start()
     {
         _controller = GetComponent<CharacterController>();//если я правильно помю это создание кортежа из параметров контроля
@@ -24,10 +24,27 @@ public class MovingControl : MonoBehaviour
     }
 
 
+
     void Update()
     {
+        //прыжок
+        //Jump();
+        if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
+        {
+            Jump();
+        }
+        //присесть
+        if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
+        {
+            _isSeat = true;
+            Seat(_isSeat);
+        }
+        else
+        {
+            _isSeat = false;   
+        }
         //бег
-        if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina>=30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.S)&& !Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !_isSeat && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina >= 30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
         {
             _moveSpeed = 6.0f;
         }
@@ -40,23 +57,36 @@ public class MovingControl : MonoBehaviour
         Vector3 moveDeraction = transform.forward * verticalInput + transform.right * horisontalInput;
         moveDeraction.y -= 9.81f * Time.deltaTime;
         _controller.Move(moveDeraction * _moveSpeed * Time.deltaTime);
-
-        //прыжок
-        if (Input.GetKey(KeyCode.Space))
-        {
-            _velocity.y += 3f;
-        }
+       
+       
     }
+
 
     private void FixedUpdate()
     {
-        Gravity();
+        Gravity(_controller.isGrounded);
     }
 
-    private void Gravity()
+
+    private void Gravity(bool isGrounded)
     {
+        if (isGrounded && _velocity.y < 0)
+        {
+            _velocity.y = -2f;
+        }
         _velocity.y-=_gravity*Time.fixedDeltaTime;
-        _controller.Move(_velocity * Time.fixedDeltaTime);
+        _controller.Move(_velocity* Time.fixedDeltaTime);
     }
+
+    private void Jump()
+    {
+        _velocity.y = _jumpStrenght;
+    }
+
+    private void Seat(bool canSeat)
+    {
+        _controller.height = canSeat ? 1f : 2f;
+    }
+    
 
 }
