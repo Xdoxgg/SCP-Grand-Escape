@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class MovingControl : MonoBehaviour
     private float _gravity = 2.0f;
     private Vector3 _velocity;
     private float _jumpStrenght = 2.0f;
+    [SerializeField]
     private bool _isSeat;
 
     void Start()
@@ -37,7 +39,7 @@ public class MovingControl : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
         {
             _isSeat = !_isSeat;
-            Seat(_isSeat);
+            Seat();
         }
         //бег
         if (Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !_isSeat && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina >= 30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
@@ -53,8 +55,6 @@ public class MovingControl : MonoBehaviour
         Vector3 moveDeraction = transform.forward * verticalInput + transform.right * horisontalInput;
         moveDeraction.y -= 9.81f * Time.deltaTime;
         _controller.Move(moveDeraction * _moveSpeed * Time.deltaTime);
-       
-       
     }
 
 
@@ -79,9 +79,16 @@ public class MovingControl : MonoBehaviour
         _velocity.y = _jumpStrenght;
     }
 
-    private void Seat(bool canSeat)
+    private void Seat()
     {
-        _controller.height = canSeat ? 1f : 2f;
+        if (_isSeat)
+        {
+            _controller.height = 1f;
+        }
+        else
+        {
+            _controller.height = 2f;
+        }
     }
     
 
