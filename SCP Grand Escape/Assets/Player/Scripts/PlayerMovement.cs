@@ -36,12 +36,8 @@ public class MovingControl : MonoBehaviour
         //присесть
         if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
         {
-            _isSeat = true;
+            _isSeat = !_isSeat;
             Seat(_isSeat);
-        }
-        else
-        {
-            _isSeat = false;   
         }
         //бег
         if (Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !_isSeat && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina >= 30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
