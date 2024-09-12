@@ -15,6 +15,7 @@ public class Playerstats : MonoBehaviour
     {
         _staminaState = 100.0f;
         _healthState = 100.0f;
+       
     }
 
     public Playerstats()
@@ -22,13 +23,11 @@ public class Playerstats : MonoBehaviour
         _staminaState = 100.0f;
         _healthState = 100.0f;
     }
-    void Update()
-    {
-        
-    }
+
 
     public float Stamina
     {
         get { return _staminaState; }
+        set { _staminaState = value; }
     }
 }

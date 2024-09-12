@@ -7,15 +7,17 @@ using UnityEngine;
 
 public class MovingControl : MonoBehaviour
 {
-    private float _moveSpeed = 3.0f;
+    private float _moveSpeed = 3f;
     [SerializeField]
     private CharacterController _controller;
+    [SerializeField]
     private Playerstats _stats;
     private float _gravity = 2.0f;
     private Vector3 _velocity;
     private float _jumpStrenght = 2.0f;
-    [SerializeField]
-    private bool _isSeat;
+
+
+
 
     void Start()
     {
@@ -29,8 +31,8 @@ public class MovingControl : MonoBehaviour
 
     void Update()
     {
+       
         //ïðûæîê
-        //Jump();
         if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
         {
             Jump();
@@ -38,17 +40,20 @@ public class MovingControl : MonoBehaviour
         //ïðèñåñòü
         if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
         {
-            _isSeat = !_isSeat;
-           // Seat();
+           //ÄÎÏÈÑÀÒÜ ÏÎÒÎÌ ÊÎÃÄÀ ÁÓÄÅÒ ÌÎÄÅËÜÊÀ ÏÅÐÑÎÍÀÆÀ, è äà ÊÎËß åñëè òû ýòî âäðóã ÷èòàåøü è åù¸ íå ñäåëàë ìîäåëüêó ïåðñîíàæà òî èäè å¸ äåëàòü (12.09.2024)
         }
         //áåã
-        if (Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !_isSeat && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina >= 30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina >= 30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D) && _stats.Stamina>0)
         {
             _moveSpeed = 6.0f;
+            _stats.Stamina -= 6f*Time.deltaTime;   
+
         }
         else
         {
             _moveSpeed = 3.0f;
+            _stats.Stamina += 3f * Time.deltaTime;
+         
         }
         float horisontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -57,39 +62,26 @@ public class MovingControl : MonoBehaviour
         _controller.Move(moveDeraction * _moveSpeed * Time.deltaTime);
     }
 
-
     private void FixedUpdate()
     {
-        Gravity(_controller.isGrounded);
-    }
-
-
-    private void Gravity(bool isGrounded)
-    {
-        if (isGrounded && _velocity.y < 0)
-        {
-            _velocity.y = -2f;
-        }
-        _velocity.y-=_gravity*Time.fixedDeltaTime;
-        _controller.Move(_velocity* Time.fixedDeltaTime);
+        Gravity();
     }
 
     private void Jump()
     {
-        _velocity.y = _jumpStrenght;
+        _velocity.y = 2f;
+        _controller.Move(_velocity * Time.deltaTime);
     }
-
-    private void Seat()
+    private void Gravity()
     {
-        if (_isSeat)
+        _velocity.y -= 0.06f;
+        if (_velocity.y < -8.0f)
         {
-            _controller.height = 1f;
+            _velocity.y = -8f;
         }
-        else
-        {
-            _controller.height = 2f;
-        }
-    }
-    
 
+        _controller.Move(_velocity * Time.deltaTime);
+    }
+
+  
 }
