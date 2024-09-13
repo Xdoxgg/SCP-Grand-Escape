@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 18716267}
   - component: {fileID: 18716266}
   - component: {fileID: 18716265}
-  - component: {fileID: 18716269}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -228,33 +227,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &18716269
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18716264}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!143 &278666496 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 7433691435889802191, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
@@ -564,6 +536,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1770486953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 615605920405229007, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
+  m_PrefabInstance: {fileID: 4039146008536789013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e17d5f61b92f846bcdfd084cfadc33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1770486954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9209875907999438482, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
+  m_PrefabInstance: {fileID: 4039146008536789013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e8d88b6b84db6458767cb2b07a7ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4039146008536789013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,6 +566,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 615605920405229007, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1770486954}
+    - target: {fileID: 615605920405229007, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2282665536689587271, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
       propertyPath: m_Name
       value: Capsule
@@ -619,7 +621,7 @@ PrefabInstance:
     - target: {fileID: 9209875907999438482, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
       propertyPath: _stats
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1770486953}
     - target: {fileID: 9209875907999438482, guid: 363b7f3e507d33540a30a21ca12ce4f7, type: 3}
       propertyPath: _controller
       value: 

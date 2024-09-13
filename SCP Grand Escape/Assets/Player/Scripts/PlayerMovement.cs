@@ -14,17 +14,15 @@ public class MovingControl : MonoBehaviour
     private Playerstats _stats;
     private float _gravity = 2.0f;
     private Vector3 _velocity;
-    private float _jumpStrenght = 2.0f;
+    private bool _run;
 
 
 
-
-    void Start()
+    void Avake()
     {
         _controller = GetComponent<CharacterController>();//если € правильно помю это создание кортежа из параметров контрол€
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        _stats=new Playerstats();
     }
 
 
@@ -43,17 +41,15 @@ public class MovingControl : MonoBehaviour
            //ƒќѕ»—ј“№ ѕќ“ќћ  ќ√ƒј Ѕ”ƒ≈“ ћќƒ≈Ћ№ ј ѕ≈–—ќЌј∆ј, и да  ќЋя если ты это вдруг читаешь и ещЄ не сделал модельку персонажа то иди еЄ делать (12.09.2024)
         }
         //бег
-        if (Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !Input.GetKey(KeyCode.LeftControl) && _stats.Stamina >= 30 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D) && _stats.Stamina>0)
+        if (_stats.ReadyToRun && Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
         {
-            _moveSpeed = 6.0f;
-            _stats.Stamina -= 6f*Time.deltaTime;   
-
+            _moveSpeed = 6.0f; 
+            _run = true;
         }
         else
         {
             _moveSpeed = 3.0f;
-            _stats.Stamina += 3f * Time.deltaTime;
-         
+            _run=false;
         }
         float horisontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -72,6 +68,7 @@ public class MovingControl : MonoBehaviour
         _velocity.y = 2f;
         _controller.Move(_velocity * Time.deltaTime);
     }
+
     private void Gravity()
     {
         _velocity.y -= 0.06f;
@@ -83,5 +80,10 @@ public class MovingControl : MonoBehaviour
         _controller.Move(_velocity * Time.deltaTime);
     }
 
+    public bool Runing
+    {
+        get { return _run; }
+        set { _run = value; }
+    }
   
 }
