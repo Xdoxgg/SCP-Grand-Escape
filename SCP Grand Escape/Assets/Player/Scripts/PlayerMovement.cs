@@ -12,7 +12,7 @@ public class MovingControl : MonoBehaviour
     private CharacterController _controller;
     [SerializeField]
     private Playerstats _stats;
-    private float _gravity = 2.0f;
+    //private float _gravity = 2.0f;
     private Vector3 _velocity;
     private bool _run;
 
