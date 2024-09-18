@@ -7,21 +7,61 @@ using UnityEngine;
 public class NPCMovement : MonoBehaviour
 {
 
-    private Rigidbody _rb;
 
-    void Start()
-    {
-        
-    }
+	[SerializeField]
+    private CharacterController _controller;
+	[SerializeField]
+	private GameObject _player;
+	private float _moveSpeed = 2f;
+	private Vector3 _velocity;
+
+	[SerializeField]
+	private float val;
+
+	void Avake()
+	{
+		_controller = GetComponent<CharacterController>();
+	}
 
 
-    void Update()
-    {
-       
 
-    }
+	private void FixedUpdate()
+	{
+		Gravity();
+		Move(false);
+	}
 
 
+	
 
 
+	private void Move(bool viewPlayer)
+	{
+		float horisontalInput=0f;
+		if (viewPlayer)
+		{
+			horisontalInput = 0f;
+		}
+		else
+		{
+			horisontalInput = (float)(int)Random.Range(-1,2);
+		}
+		val = horisontalInput;
+		float verticalInput = 1f;
+		Vector3 moveDeraction = transform.forward * verticalInput + transform.right * horisontalInput;
+		moveDeraction.y -= 9.81f * Time.deltaTime;
+		_controller.Move(moveDeraction * _moveSpeed * Time.deltaTime);
+	}
+
+
+	private void Gravity()
+	{
+		_velocity.y -= 0.06f;
+		if (_velocity.y < -8.0f)
+		{
+			_velocity.y = -8f;
+		}
+
+		_controller.Move(_velocity * Time.deltaTime);
+	}
 }

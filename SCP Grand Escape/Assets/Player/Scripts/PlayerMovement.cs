@@ -64,14 +64,6 @@ public class MovingControl : MonoBehaviour
         Gravity();
     }
 
-
-    private void FuckYou()
-    {
-
-
-
-        System.Console.WriteLine("Fuck you");
-    }
     private void Jump()
     {
         _velocity.y = 2f;
