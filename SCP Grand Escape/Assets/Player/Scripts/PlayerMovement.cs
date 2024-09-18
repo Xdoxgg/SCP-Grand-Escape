@@ -51,6 +51,7 @@ public class MovingControl : MonoBehaviour
             _moveSpeed = 3.0f;
             _run=false;
         }
+        
         float horisontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 moveDeraction = transform.forward * verticalInput + transform.right * horisontalInput;
@@ -63,6 +64,14 @@ public class MovingControl : MonoBehaviour
         Gravity();
     }
 
+
+    private void FuckYou()
+    {
+
+
+
+        System.Console.WriteLine("Fuck you");
+    }
     private void Jump()
     {
         _velocity.y = 2f;
