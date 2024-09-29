@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.Properties;
 using UnityEditor;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine;
 public class NPCMovement : MonoBehaviour
 {
 
-
+	//private float _rotationX = 0.0f;
 	[SerializeField]
     private CharacterController _controller;
 	[SerializeField]
@@ -32,7 +33,11 @@ public class NPCMovement : MonoBehaviour
 	}
 
 
-	
+	private void Update()
+	{
+		transform.parent.Rotate(Vector3.up);
+	}
+
 
 
 	private void Move(bool viewPlayer)

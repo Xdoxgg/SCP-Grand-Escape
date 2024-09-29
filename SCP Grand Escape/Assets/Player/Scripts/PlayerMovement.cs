@@ -21,17 +21,19 @@ public class MovingControl : MonoBehaviour
     void Avake()
     {
         _controller = GetComponent<CharacterController>();//если я правильно помю это создание кортежа из параметров контроля
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
+	private void Start()
+	{
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+	}
 
-
-    void Update()
+	void Update()
     {
-       
-        //прыжок
-        if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
+		
+		//прыжок
+		if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
         {
             Jump();
         }
