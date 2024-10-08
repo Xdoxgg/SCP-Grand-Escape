@@ -353,10 +353,15 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Locations/ActiveObjects/DoorMovement.cs"
+"Assets/MenuUI/Exit.cs"
+"Assets/MenuUI/Scenes.cs"
 "Assets/NPC/NPCMovement.cs"
 "Assets/Player/Scripts/CameraControl.cs"
+"Assets/Player/Scripts/Interectable.cs"
+"Assets/Player/Scripts/PlayerIntarection.cs"
 "Assets/Player/Scripts/PlayerMovement.cs"
 "Assets/Player/Scripts/PlayerStats.cs"
+"Assets/Player/Scripts/UI.cs"
 -langversion:9.0
 /deterministic
 /optimize+
