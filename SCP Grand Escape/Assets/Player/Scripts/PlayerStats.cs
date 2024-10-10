@@ -16,7 +16,7 @@ public class Playerstats : MonoBehaviour
     private MovingControl _player;
     private System.Timers.Timer _runCoolDown;
 
-    private int n;
+    
     void Start()
     {
         _runCoolDown = new System.Timers.Timer();
