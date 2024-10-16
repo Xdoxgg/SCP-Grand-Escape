@@ -5,20 +5,31 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Timers;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
 
 	[SerializeField]
-	private Canvas _canvas;
+	private GameObject _button;
+	private bool _menuOpen;
+	
 	private void Start()
 	{
-		Button Exit = new Button();
-		_canvas.AddComponent<Exit>();
+		_menuOpen = false;
 
 	}
 	private void Update()
 	{
-
+		if (Input.GetKey(KeyCode.Backspace))
+		{
+            _menuOpen=!_menuOpen;
+        }
+		if (_menuOpen)
+		{
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            UnityEngine.Cursor.visible = true;
+            _button.SetActive(_menuOpen);
+        }
 	}
 }

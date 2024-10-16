@@ -6,6 +6,7 @@ public class Exit : MonoBehaviour
 {
 	public void ExitProgramm()
 	{
+		Debug.Log("Exit program");
 		Application.Quit();
 	}
 }
