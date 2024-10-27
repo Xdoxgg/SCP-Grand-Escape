@@ -363,11 +363,14 @@
 "Assets/MenuUI/Scenes.cs"
 "Assets/NPC/NPCMovement.cs"
 "Assets/Player/Scripts/CameraControl.cs"
+"Assets/Player/Scripts/FlashlightItem.cs"
 "Assets/Player/Scripts/Interectable.cs"
 "Assets/Player/Scripts/PlayerIntarection.cs"
+"Assets/Player/Scripts/PlayerInventary.cs"
 "Assets/Player/Scripts/PlayerMovement.cs"
 "Assets/Player/Scripts/PlayerStats.cs"
 "Assets/Player/Scripts/UI.cs"
+"Assets/Player/Scripts/UsefulItem.cs"
 -langversion:9.0
 /deterministic
 /optimize+

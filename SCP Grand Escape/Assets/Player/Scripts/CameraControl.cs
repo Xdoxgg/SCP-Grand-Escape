@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float mouseSensetive = 2.0f;//чувствительность мыши
-    public float maxYAngle = 80.0f;//максимальный уровень вращения по вертикали
-
-
+    
+    public float mouseSensetive = 2.0f;
+    public float maxYAngle = 80.0f;
     private float _rotationX = 0.0f;
 
 
@@ -17,7 +16,7 @@ public class CameraController : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y");
 
 
-        transform.parent.Rotate(Vector3.up * mouseX * mouseSensetive);//вращение камеры по горизонтали
+        transform.parent.Rotate(Vector3.up * mouseX * mouseSensetive);
 
 
         _rotationX -= mouseY * mouseSensetive;

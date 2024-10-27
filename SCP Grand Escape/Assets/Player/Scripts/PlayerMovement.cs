@@ -12,15 +12,14 @@ public class MovingControl : MonoBehaviour
     private CharacterController _controller;
     [SerializeField]
     private Playerstats _stats;
-    //private float _gravity = 2.0f;
+
     private Vector3 _velocity;
     private bool _run;
 
 
-
     void Avake()
     {
-        _controller = GetComponent<CharacterController>();//если € правильно помю это создание кортежа из параметров контрол€
+        _controller = GetComponent<CharacterController>();
     }
 
 	private void Start()
@@ -32,17 +31,17 @@ public class MovingControl : MonoBehaviour
 	void Update()
     {
 		
-		//прыжок
+	
 		if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
         {
             Jump();
         }
-        //присесть
+  
         if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
         {
-           //ƒќѕ»—ј“№ ѕќ“ќћ  ќ√ƒј Ѕ”ƒ≈“ ћќƒ≈Ћ№ ј ѕ≈–—ќЌј∆ј, и да  ќЋя если ты это вдруг читаешь и ещЄ не сделал модельку персонажа то иди еЄ делать (12.09.2024)
+          
         }
-        //бег
+
         if (_stats.ReadyToRun && Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
         {
             _moveSpeed = 6.0f; 
