@@ -25,13 +25,16 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        _selectedItem = 0;
+        _selectedItem = 1;
         _menuOpen = false;
         _timer = new System.Timers.Timer();
         _timer.Interval = 300;
         _timer.Elapsed += MenuColDown;
         _ready = true;
         _inventoryOpen = false;
+        SetText(_itemButtonsTexts[0], _playerInventary.Items[0].Name);
+            
+        
     }
 
     private void MenuColDown(object sender, ElapsedEventArgs e)
@@ -54,7 +57,7 @@ public class UI : MonoBehaviour
 
     public void SetSelectedItem(int item)
     {
-        if (_selectedItem == _selectedItem)
+        if (_selectedItem == item)
         {
             _selectedItem = 0;
         }
@@ -70,6 +73,23 @@ public class UI : MonoBehaviour
     }
 
 
+    private void ActivateSelectedItem()
+    {
+        switch (_selectedItem)
+        {
+            case 1:{
+                _playerInventary.Items[0].SetActive(true);
+                if (Input.GetMouseButtonDown(1) && _ready)
+                {
+                    ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
+                    _ready = false;
+                    _timer.Start();
+                }
+                break;
+            }
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.Backspace) && _ready && !_inventoryOpen)
@@ -84,28 +104,19 @@ public class UI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab) && _ready && !_menuOpen)
         {
-            _ready = false;
+           
             UnityEngine.Cursor.lockState = !_inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
             UnityEngine.Cursor.visible = !_inventoryOpen;
             _panel.SetActive(!_inventoryOpen);
             _inventoryOpen = !_inventoryOpen;
             _timer.Start();
-            for (int i = 0; i < _itemButtonsTexts.Length; i++)
-            {
-                SetText(_itemButtonsTexts[i], _playerInventary.Items[i].Name);
-            }
         }
 
-        switch (_selectedItem)
+        if (_selectedItem != 0)
         {
-            case 1:{
-                _playerInventary.Items[0].SetActive(true);
-                if (Input.GetMouseButtonDown(0))
-                {
-                    ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
-                }
-                break;
-            }
+            ActivateSelectedItem();
         }
+     
+       
     }
 }
