@@ -57,38 +57,20 @@ public class UI : MonoBehaviour
 
     public void SetSelectedItem(int item)
     {
-        if (_selectedItem == item)
-        {
-            _selectedItem = 0;
-        }
-        else
-        {
-            _selectedItem = item;
-        }
+        _selectedItem = item;
 
-        for (int i = 0; i < _playerInventary.Items.Length; i++)
-        {
-            _playerInventary.Items[i].SetActive(false);
-        }
-    }
-
-
-    private void ActivateSelectedItem()
-    {
         switch (_selectedItem)
         {
             case 1:{
                 _playerInventary.Items[0].SetActive(true);
-                if (Input.GetMouseButtonDown(1) && _ready)
-                {
-                    ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
-                    _ready = false;
-                    _timer.Start();
-                }
+               
                 break;
             }
         }
     }
+
+
+
 
     private void Update()
     {
@@ -102,9 +84,9 @@ public class UI : MonoBehaviour
             _timer.Start();
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab) && _ready && !_menuOpen)
+        if (Input.GetKeyDown(KeyCode.I) && _ready && !_menuOpen)
         {
-           
+            _ready = false;
             UnityEngine.Cursor.lockState = !_inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
             UnityEngine.Cursor.visible = !_inventoryOpen;
             _panel.SetActive(!_inventoryOpen);
@@ -112,9 +94,11 @@ public class UI : MonoBehaviour
             _timer.Start();
         }
 
-        if (_selectedItem != 0)
+        if (Input.GetKey(KeyCode.F) && _ready && _selectedItem == 1)
         {
-            ActivateSelectedItem();
+            ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
+            _ready = false;
+            _timer.Start();
         }
      
        
