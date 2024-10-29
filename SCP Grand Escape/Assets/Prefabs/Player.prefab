@@ -890,7 +890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _object: {fileID: 4296274461339094746}
-  _light: {fileID: 4089831917651481123}
+  _light: {fileID: 3477312050229102272}
 --- !u!1 &4909328727642824997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1189,7 @@ Transform:
   m_GameObject: {fileID: 6092191238909994546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12305236, y: 1.84, z: -8.837392}
+  m_LocalPosition: {x: -0.12305236, y: 1.84, z: 0.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1339,10 +1339,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panel: {fileID: 5629131670145172192}
   _itemButtonsTexts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 257285342204544236}
+  - {fileID: 2253618959259639058}
+  - {fileID: 8678703663465188895}
+  - {fileID: 7558791957273046730}
   _button: {fileID: 7698009217721932799}
   _menuOpen: 0
   _inventoryOpen: 0

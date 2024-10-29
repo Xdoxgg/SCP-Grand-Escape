@@ -45,25 +45,28 @@ public class UI : MonoBehaviour
 
     private static void SetText(Text button, string text)
     {
-        if (text != null)
-        {
-            button.GetComponentInChildren<Text>().text = text;
-        }
-        else
-        {
-            button.GetComponentInChildren<Text>().text = "nothing";
-        }
+        button.GetComponentInChildren<Text>().text = text ?? "nothing";
     }
 
     public void SetSelectedItem(int item)
     {
         _selectedItem = item;
-
+        _ready = false;
+        UnityEngine.Cursor.lockState = !_inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = !_inventoryOpen;
+        _panel.SetActive(!_inventoryOpen);
+        _inventoryOpen = !_inventoryOpen;
+        _timer.Start();
         switch (_selectedItem)
         {
             case 1:{
                 _playerInventary.Items[0].SetActive(true);
                
+                break;
+            }
+            case 2:
+            {
+                _playerInventary.Items[1].SetActive(true);
                 break;
             }
         }
@@ -94,13 +97,31 @@ public class UI : MonoBehaviour
             _timer.Start();
         }
 
-        if (Input.GetKey(KeyCode.F) && _ready && _selectedItem == 1)
+       
+
+        switch (_selectedItem)
         {
-            ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
-            _ready = false;
-            _timer.Start();
+            case 1:
+            {
+                if (Input.GetKey(KeyCode.F) && _ready)
+                {
+                    ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
+                    _ready = false;
+                    _timer.Start();
+                }
+                break;
+            }
+            case 2:
+            {
+                if (Input.GetKey(KeyCode.F) && _ready)
+                {
+                    ((Laptop)_playerInventary.Items[1]).SwapPage();
+                    _ready = false;
+                    _timer.Start();
+                }
+                break;
+            }
         }
-     
        
     }
 }
