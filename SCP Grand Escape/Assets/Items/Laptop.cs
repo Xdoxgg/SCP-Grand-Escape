@@ -19,6 +19,7 @@ public class Laptop : UsefulItem
     public Laptop()
     {
         _activePage = 0;
+        Name= "Laptop";
     }
 
     public void SwapPage()

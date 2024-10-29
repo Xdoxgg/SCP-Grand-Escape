@@ -25,15 +25,18 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        _selectedItem = 1;
+        _selectedItem = 0;
         _menuOpen = false;
         _timer = new System.Timers.Timer();
         _timer.Interval = 300;
         _timer.Elapsed += MenuColDown;
         _ready = true;
         _inventoryOpen = false;
-        SetText(_itemButtonsTexts[0], _playerInventary.Items[0].Name);
-            
+        for (int i = 0; i < 2; i++)
+        {
+            SetText(_itemButtonsTexts[i], _playerInventary.Items[i].Name);
+        }
+       
         
     }
 
@@ -50,25 +53,28 @@ public class UI : MonoBehaviour
 
     public void SetSelectedItem(int item)
     {
-        _selectedItem = item;
+        if (_selectedItem == item)
+        {
+            _selectedItem = 0;
+        }
+        else
+        {
+            _selectedItem = item;
+        }
         _ready = false;
         UnityEngine.Cursor.lockState = !_inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
         UnityEngine.Cursor.visible = !_inventoryOpen;
         _panel.SetActive(!_inventoryOpen);
         _inventoryOpen = !_inventoryOpen;
         _timer.Start();
-        switch (_selectedItem)
+        for (int i = 0; i < 2; i++)
         {
-            case 1:{
-                _playerInventary.Items[0].SetActive(true);
-               
-                break;
-            }
-            case 2:
-            {
-                _playerInventary.Items[1].SetActive(true);
-                break;
-            }
+            _playerInventary.Items[i].SetActive(false);
+        }
+
+        if (_selectedItem != 0)
+        {
+            _playerInventary.Items[_selectedItem - 1].SetActive(true);
         }
     }
 
@@ -96,8 +102,6 @@ public class UI : MonoBehaviour
             _inventoryOpen = !_inventoryOpen;
             _timer.Start();
         }
-
-       
 
         switch (_selectedItem)
         {
