@@ -356,23 +356,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Items/FlashlightItem.cs"
 "Assets/Items/Laptop.cs"
-"Assets/Items/UsefulItem.cs"
 "Assets/Locations/ActiveObjects/DoorMovement.cs"
 "Assets/Locations/ActiveObjects/LiftController.cs"
 "Assets/Locations/Mesh generation.cs"
 "Assets/MenuUI/Exit.cs"
 "Assets/MenuUI/Scenes.cs"
 "Assets/NPC/NPCMovement.cs"
-"Assets/Player/Scripts/default/CameraControl.cs"
-"Assets/Player/Scripts/default/PlayerMovement.cs"
-"Assets/Player/Scripts/default/PlayerStats.cs"
-"Assets/Player/Scripts/Intatect/DoorController.cs"
-"Assets/Player/Scripts/Intatect/IInteractable.cs"
 "Assets/Player/Scripts/Intatect/PlayerInteraction.cs"
-"Assets/Player/Scripts/UI/PlayerInventary.cs"
-"Assets/Player/Scripts/UI/UI.cs"
 -langversion:9.0
 /deterministic
 /optimize+
