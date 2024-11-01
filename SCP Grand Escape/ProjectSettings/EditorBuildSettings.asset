@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SaveZoneLocation.unity
     guid: e5ae9e0b025576e4d87be8ef0971888d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlayertestScene.unity
     guid: 24a6508084e7a814791fbb0207714126
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NPCTestScene.unity
     guid: f5c2647b2a77de745989d2a34f4228a5
   m_configObjects: {}
