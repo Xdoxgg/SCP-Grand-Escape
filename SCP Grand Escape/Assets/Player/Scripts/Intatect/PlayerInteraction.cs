@@ -27,7 +27,7 @@ public class PlayerInteraction : MonoBehaviour
             if (interacteble != null)
             {
                 hitSomething = true;
-                interactionText.text = interacteble.GetDescription();
+                interactionText.text = interacteble.GetDesciption();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     interacteble.Interact();
