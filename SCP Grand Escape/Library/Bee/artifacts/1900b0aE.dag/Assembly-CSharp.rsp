@@ -369,9 +369,9 @@
 "Assets/Player/Scripts/Default/PlayerInventary.cs"
 "Assets/Player/Scripts/Default/PlayerMovement.cs"
 "Assets/Player/Scripts/Default/PlayerStats.cs"
-"Assets/Player/Scripts/Default/UI.cs"
 "Assets/Player/Scripts/Intatect/IInteracteble.cs"
 "Assets/Player/Scripts/Intatect/PlayerInteraction.cs"
+"Assets/Player/Scripts/UI/UI.cs"
 -langversion:9.0
 /deterministic
 /optimize+
