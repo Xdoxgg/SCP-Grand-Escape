@@ -10,7 +10,7 @@ public class PlayerInventary: MonoBehaviour
 
     public PlayerInventary()
     {
-        _items = new UsefulItem[4];
+        
     }
     
     public UsefulItem[] Items

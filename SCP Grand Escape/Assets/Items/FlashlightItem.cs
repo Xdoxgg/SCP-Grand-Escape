@@ -5,7 +5,7 @@ using UnityEngine.PlayerLoop;
 
 public class FlashlightItem : UsefulItem
 {
-    [SerializeField] private Light _light;
+    [SerializeField] private GameObject _light;
     private bool _isActive;
 
     public FlashlightItem()
@@ -17,7 +17,7 @@ public class FlashlightItem : UsefulItem
     public void ToggleFlashlight()
     {
         _isActive = !_isActive;
-        _light.enabled = _isActive;
+        _light.SetActive(_isActive); 
         
     }
 }

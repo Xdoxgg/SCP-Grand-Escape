@@ -27,12 +27,11 @@ public class UI : MonoBehaviour
         _menuOpen = false;
         
         _inventoryOpen = false;
-         for (int i = 0; i < 1; i++)
+         for (int i = 0; i < _playerInventary.Items.Length; i++)
          {
              SetText(_itemButtonsTexts[i], _playerInventary.Items[i].Name);
          }
-         
-        
+
     }
 
 
@@ -45,22 +44,19 @@ public class UI : MonoBehaviour
 
     public void SetSelectedItem(int item)
     {
+ 
         _selectedItem = _selectedItem == item ? 0 : item;
-       
         UnityEngine.Cursor.lockState = !_inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
         UnityEngine.Cursor.visible = !_inventoryOpen;
         _panel.SetActive(!_inventoryOpen);
         _inventoryOpen = !_inventoryOpen;
-      
-        for (int i = 0; i < 2; i++)
+        
+        for (int i = 0; i < _playerInventary.Items.Length; i++)
         {
             _playerInventary.Items[i].SetActive(false);
         }
         
-        if (_selectedItem != 0)
-        {
-            _playerInventary.Items[_selectedItem - 1].SetActive(true);
-        }
+        _playerInventary.Items[_selectedItem-1].SetActive(true);
     }
 
 
@@ -85,13 +81,15 @@ public class UI : MonoBehaviour
             _panel.SetActive(!_inventoryOpen);
             _inventoryOpen = !_inventoryOpen; ;
         }
-
+        
         switch (_selectedItem)
         {
             case 1:
             {
+               
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    
                     ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
                 
                 }
