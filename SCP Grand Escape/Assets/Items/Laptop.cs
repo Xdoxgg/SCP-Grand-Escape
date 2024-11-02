@@ -6,7 +6,7 @@ using TMPro;
 
 public class Laptop : UsefulItem
 {
-    [SerializeField] private TextMeshPro[] _pages;
+    [SerializeField] private string[] _pages;
     [SerializeField] private TextMeshPro _title;
     private int _activePage;
 
@@ -33,7 +33,7 @@ public class Laptop : UsefulItem
             _activePage = 0;
         }
 
-        _title.SetText(_pages[_activePage].text);
+        _title.SetText(_pages[_activePage]);
         
     }
 }

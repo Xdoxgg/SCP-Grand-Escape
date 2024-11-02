@@ -44,19 +44,23 @@ public class UI : MonoBehaviour
 
     public void SetSelectedItem(int item)
     {
- 
+
         _selectedItem = _selectedItem == item ? 0 : item;
         UnityEngine.Cursor.lockState = !_inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
         UnityEngine.Cursor.visible = !_inventoryOpen;
         _panel.SetActive(!_inventoryOpen);
         _inventoryOpen = !_inventoryOpen;
-        
+
         for (int i = 0; i < _playerInventary.Items.Length; i++)
         {
             _playerInventary.Items[i].SetActive(false);
         }
-        
-        _playerInventary.Items[_selectedItem-1].SetActive(true);
+
+       // Debug.Log(_selectedItem);
+        if (_selectedItem != 0)
+        {
+            _playerInventary.Items[_selectedItem - 1].SetActive(true);
+        }
     }
 
 
