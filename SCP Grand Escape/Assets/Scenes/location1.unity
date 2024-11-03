@@ -12410,25 +12410,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 764240017}
   m_VersionIndex: 13937
   m_IsSelectable: 1
-  m_SelectedFaces: 6b0100006f010000
-  m_SelectedEdges:
-  - a: 1460
-    b: 1461
-  - a: 1462
-    b: 1460
-  - a: 1461
-    b: 1463
-  - a: 1463
-    b: 1462
-  - a: 1476
-    b: 1477
-  - a: 1478
-    b: 1476
-  - a: 1477
-    b: 1479
-  - a: 1479
-    b: 1478
-  m_SelectedVertices: b4050000b5050000b6050000b7050000c4050000c5050000c6050000c7050000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &956191724
 Transform:
   m_ObjectHideFlags: 0
@@ -12518,7 +12502,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3240969503840220675, guid: 5c02b21bcb70e2a4c89019e8db961f69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.7
+      value: -2.2999997
       objectReference: {fileID: 0}
     - target: {fileID: 3240969503840220675, guid: 5c02b21bcb70e2a4c89019e8db961f69, type: 3}
       propertyPath: m_LocalPosition.y
