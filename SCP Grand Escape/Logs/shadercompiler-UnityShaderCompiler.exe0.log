@@ -3,6 +3,7 @@ Cmd: initializeCompiler
 
 
 
+<<<<<<< HEAD
 Cmd: initializeCompiler
 
 Cmd: preprocess
@@ -72,3 +73,6 @@ Cmd: preprocess
 Cmd: initializeCompiler
 
 Cmd: shutdown
+=======
+
+>>>>>>> 8a6ae6a3954b47a0572cf5a027d485eea6386e37

@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638662488776641420
     m_Hash: 2237573578
+=======
+      ticks: 638662483301215539
+    m_Hash: 1379477479
+>>>>>>> 8a6ae6a3954b47a0572cf5a027d485eea6386e37
   m_LockFileStatus:
     m_FilePath: D:/Study/projects/SCPGE/SCP Grand Escape/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 638662488776676693
     m_Hash: 2330345019
+=======
+      ticks: 638662483301255539
+    m_Hash: 1329378417
+>>>>>>> 8a6ae6a3954b47a0572cf5a027d485eea6386e37
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

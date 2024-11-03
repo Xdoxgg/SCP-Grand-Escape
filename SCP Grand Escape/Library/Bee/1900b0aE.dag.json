@@ -25164,8 +25164,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1889399,
       "PayloadLength": 35821,
+=======
+      "PayloadOffset": 1805471,
+      "PayloadLength": 35601,
+>>>>>>> 8a6ae6a3954b47a0572cf5a027d485eea6386e37
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
@@ -25177,7 +25182,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1925307,
+=======
+      "PayloadOffset": 1841159,
+>>>>>>> 8a6ae6a3954b47a0572cf5a027d485eea6386e37
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -25431,9 +25440,7 @@
         "Assets/Items/KeyCardInveractive.cs",
         "Assets/Items/Laptop.cs",
         "Assets/Items/UsefulItem.cs",
-        "Assets/Locations/ActiveObjects/DoorMovement.cs",
-        "Assets/Locations/ActiveObjects/LiftController.cs",
-        "Assets/Locations/Mesh generation.cs",
+        "Assets/Locations/ActiveObjects/DoorController.cs",
         "Assets/MenuUI/Exit.cs",
         "Assets/MenuUI/Scenes.cs",
         "Assets/NPC/NPCMovement.cs",
@@ -25758,8 +25765,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1925403,
       "PayloadLength": 9878,
+=======
+      "PayloadOffset": 1841255,
+      "PayloadLength": 9719,
+>>>>>>> 8a6ae6a3954b47a0572cf5a027d485eea6386e37
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [
