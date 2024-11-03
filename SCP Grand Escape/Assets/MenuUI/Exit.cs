@@ -9,4 +9,5 @@ public class Exit : MonoBehaviour
 		Debug.Log("Exit program");
 		Application.Quit();
 	}
+	//sdsdasdas
 }
