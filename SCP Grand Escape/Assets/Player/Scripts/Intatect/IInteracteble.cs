@@ -6,5 +6,5 @@ public interface IInteracteble
 {
     void Interact();
     string GetDesciption();
-
+    bool IsInventereble();
 }

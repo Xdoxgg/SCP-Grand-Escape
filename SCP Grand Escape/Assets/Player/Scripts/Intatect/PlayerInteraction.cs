@@ -14,12 +14,12 @@ public class PlayerInteraction : MonoBehaviour
     {
         InteractionRay();
     }
-    
+
     public void InteractionRay()
     {
         Ray ray = mainCamera.ViewportPointToRay(Vector3.one / 2f);
         RaycastHit hit;
-
+        bool view = true;
         bool hitSomething = false;
         if (Physics.Raycast(ray, out hit, distance))
         {
@@ -27,13 +27,27 @@ public class PlayerInteraction : MonoBehaviour
             if (interacteble != null)
             {
                 hitSomething = true;
-                interactionText.text = interacteble.GetDesciption();
+               
+                if (interacteble.IsInventereble())
+                {
+                    if (((UsefulItem)interacteble).InInventary)
+                    {
+                        view = false;
+                    }
+                }
+
+                if (view)
+                    interactionText.text = interacteble.GetDesciption();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    interacteble.Interact();
+                    if (view)
+                    {
+                        interacteble.Interact();
+                    }
                 }
             }
         }
-        interactionUI.SetActive(hitSomething);
+        
+        interactionUI.SetActive(hitSomething && view);
     }
 }
