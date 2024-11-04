@@ -8,6 +8,7 @@ public class PlayerInventary: MonoBehaviour
     [SerializeField]
     private UsefulItem[] _items;
 
+
     public PlayerInventary()
     {
         
@@ -18,4 +19,5 @@ public class PlayerInventary: MonoBehaviour
         get => _items;
         set => _items = value;
     }
+
 }
