@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class UsefulItem : MonoBehaviour, IInteracteble
 {
+    [SerializeField]
+    private PlayerInventary _playerInventary;
+    
     [SerializeField] private GameObject _object;
     private string _name;
     [SerializeField] private bool _inInventary;
@@ -38,6 +41,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
     {
         _object.SetActive(false);
         _inInventary = true;
+        _playerInventary.AddItem(this);
     }
 
     public string GetDesciption()

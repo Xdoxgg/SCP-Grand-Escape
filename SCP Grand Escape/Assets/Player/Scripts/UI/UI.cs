@@ -23,7 +23,7 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-       _selectedItem = 0;
+        _selectedItem = 0;
         _menuOpen = false;
         
         _inventoryOpen = false;
