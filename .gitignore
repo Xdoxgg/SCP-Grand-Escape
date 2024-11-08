@@ -46,7 +46,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-*.idea
+
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -71,3 +71,37 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Rider specific files
+.idea/
+*.sln.iml
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# Rider caches
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+
+# Visual Studio specific files
+.vs/
+*.vscode/
+
+# Other files to ignore
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
