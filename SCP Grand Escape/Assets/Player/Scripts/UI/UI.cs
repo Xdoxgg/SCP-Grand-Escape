@@ -96,30 +96,34 @@ public class UI : MonoBehaviour
             _panel.SetActive(!_inventoryOpen);
             _inventoryOpen = !_inventoryOpen; ;
         }
-        
-        switch (_selectedItem)
+
+        if (_selectedItem != 0 && _playerInventary.Items[_selectedItem - 1] != null)
         {
-            case 1:
+            switch (_playerInventary.Items[_selectedItem-1].Name)
             {
-               
-                if (Input.GetKeyDown(KeyCode.F))
+                case "Flashlight":
                 {
-                    
-                    ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
-                
+
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+
+                        ((FlashlightItem)_playerInventary.Items[_selectedItem-1]).ToggleFlashlight();
+
+                    }
+
+                    break;
                 }
-                break;
-            }
-            case 2:
-            {
-                if (Input.GetKeyDown(KeyCode.F))
+                case "Laptop":
                 {
-                    ((Laptop)_playerInventary.Items[1]).SwapPage();
-                
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        ((Laptop)_playerInventary.Items[_selectedItem-1]).SwapPage();
+
+                    }
+
+                    break;
                 }
-                break;
             }
         }
-       
     }
 }

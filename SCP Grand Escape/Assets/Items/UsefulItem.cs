@@ -8,7 +8,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
 
     [SerializeField] private GameObject _object;
 
-    private string _name;
+    [SerializeField] private string _name;
 
     [SerializeField] private bool _inInventary;
     [SerializeField] private GameObject _playerObject;
@@ -47,7 +47,21 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         _playerInventary.AddItem(this);
         _object.transform.parent = _playerObject.transform;
         _object.transform.rotation = _playerObject.transform.rotation;
-        _object.transform.position = _playerObject.transform.position+new Vector3(0.6f,0.2f,-1f);
+        
+        switch (_name)
+        {
+            case "Flashlight":
+            {
+                _object.transform.position = _playerObject.transform.position+new Vector3(0.7f,0.2f,-1f);
+                break;
+            }
+            case "Laptop":
+            {
+                _object.transform.position = _playerObject.transform.position+new Vector3(0.7f,0.6f,-0.8f);
+                break;
+            }
+        }
+       
     }
 
     public string GetDesciption()

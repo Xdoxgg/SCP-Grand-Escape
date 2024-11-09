@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class KeyCardInveractive : UsefulItem
 {
-    private int _accept;
+   // private int _accept;
 
     public KeyCardInveractive()
     {
         this.Name = "KeyCardInveractive";
-        _accept = 0;
+       // _accept = 0;
     }
 }
