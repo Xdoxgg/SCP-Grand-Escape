@@ -29,12 +29,22 @@ public class UI : MonoBehaviour
         _inventoryOpen = false;
          for (int i = 0; i < _playerInventary.Items.Length; i++)
          {
-             SetText(_itemButtonsTexts[i], _playerInventary.Items[i].Name);
+             string text=_playerInventary.Items[i]==null?"none":_playerInventary.Items[i].Name;
+             
+             SetText(_itemButtonsTexts[i], text);
          }
 
     }
 
-
+    public void RenameButtons()
+    {
+        for (int i = 0; i < _playerInventary.Items.Length; i++)
+        {
+            string text=_playerInventary.Items[i]==null?"none":_playerInventary.Items[i].Name;
+             
+            SetText(_itemButtonsTexts[i], text);
+        }
+    }
 
     
     private static void SetText(Text button, string text)
@@ -51,12 +61,13 @@ public class UI : MonoBehaviour
         _panel.SetActive(!_inventoryOpen);
         _inventoryOpen = !_inventoryOpen;
 
-        for (int i = 0; i < _playerInventary.Items.Length; i++)
+        for (int i =0; i<  _playerInventary.Items.Length; i++)
         {
-            _playerInventary.Items[i].SetActive(false);
+            if (_playerInventary.Items[i] != null)
+            {
+                _playerInventary.Items[i].SetActive(false);
+            }
         }
-
-       // Debug.Log(_selectedItem);
         if (_selectedItem != 0)
         {
             _playerInventary.Items[_selectedItem - 1].SetActive(true);

@@ -26,6 +26,6 @@ public class DoorController : MonoBehaviour, IInteracteble
 
     public string GetDesciption()
     {
-        return _doorOpen ? "Open" : "Close";
+        return _doorOpen ? "Close" : "Open";
     }
 }
