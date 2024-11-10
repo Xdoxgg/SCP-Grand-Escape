@@ -40,6 +40,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
    
     }
 
+
     public void Interact()
     {
         _object.SetActive(false);
@@ -57,7 +58,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
             }
             case "Laptop":
             {
-                _object.transform.position = _playerObject.transform.position+new Vector3(0.7f,0.6f,-0.8f);
+                _object.transform.position = _playerObject.transform.position+new Vector3(0.69f,0.6f,-0.8f);
                 break;
             }
         }

@@ -68,7 +68,7 @@ public class UI : MonoBehaviour
                 _playerInventary.Items[i].SetActive(false);
             }
         }
-        if (_selectedItem != 0)
+        if (_selectedItem != 0 &&_playerInventary.Items[_selectedItem-1] != null)
         {
             _playerInventary.Items[_selectedItem - 1].SetActive(true);
         }
