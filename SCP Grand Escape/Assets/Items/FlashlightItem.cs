@@ -14,6 +14,7 @@ public class FlashlightItem : UsefulItem
         Name = "Flashlight";
     }
 
+
     public void ToggleFlashlight()
     {
         _isActive = !_isActive;

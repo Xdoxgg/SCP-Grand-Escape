@@ -7,6 +7,7 @@ public class DoorController : MonoBehaviour, IInteracteble
 {
     [SerializeField] private GameObject _door;
     [SerializeField] private bool _doorOpen;
+    
     public bool IsInventereble()
     {
         return false;
@@ -25,6 +26,6 @@ public class DoorController : MonoBehaviour, IInteracteble
 
     public string GetDesciption()
     {
-        return _doorOpen ? "Open" : "Close";
+        return _doorOpen ? "Close" : "Open";
     }
 }

@@ -23,18 +23,28 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-       _selectedItem = 0;
+        _selectedItem = 0;
         _menuOpen = false;
         
         _inventoryOpen = false;
          for (int i = 0; i < _playerInventary.Items.Length; i++)
          {
-             SetText(_itemButtonsTexts[i], _playerInventary.Items[i].Name);
+             string text=_playerInventary.Items[i]==null?"none":_playerInventary.Items[i].Name;
+             
+             SetText(_itemButtonsTexts[i], text);
          }
 
     }
 
-
+    public void RenameButtons()
+    {
+        for (int i = 0; i < _playerInventary.Items.Length; i++)
+        {
+            string text=_playerInventary.Items[i]==null?"none":_playerInventary.Items[i].Name;
+             
+            SetText(_itemButtonsTexts[i], text);
+        }
+    }
 
     
     private static void SetText(Text button, string text)
@@ -51,13 +61,14 @@ public class UI : MonoBehaviour
         _panel.SetActive(!_inventoryOpen);
         _inventoryOpen = !_inventoryOpen;
 
-        for (int i = 0; i < _playerInventary.Items.Length; i++)
+        for (int i =0; i<  _playerInventary.Items.Length; i++)
         {
-            _playerInventary.Items[i].SetActive(false);
+            if (_playerInventary.Items[i] != null)
+            {
+                _playerInventary.Items[i].SetActive(false);
+            }
         }
-
-       // Debug.Log(_selectedItem);
-        if (_selectedItem != 0)
+        if (_selectedItem != 0 &&_playerInventary.Items[_selectedItem-1] != null)
         {
             _playerInventary.Items[_selectedItem - 1].SetActive(true);
         }
@@ -85,30 +96,34 @@ public class UI : MonoBehaviour
             _panel.SetActive(!_inventoryOpen);
             _inventoryOpen = !_inventoryOpen; ;
         }
-        
-        switch (_selectedItem)
+
+        if (_selectedItem != 0 && _playerInventary.Items[_selectedItem - 1] != null)
         {
-            case 1:
+            switch (_playerInventary.Items[_selectedItem-1].Name)
             {
-               
-                if (Input.GetKeyDown(KeyCode.F))
+                case "Flashlight":
                 {
-                    
-                    ((FlashlightItem)_playerInventary.Items[0]).ToggleFlashlight();
-                
+
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+
+                        ((FlashlightItem)_playerInventary.Items[_selectedItem-1]).ToggleFlashlight();
+
+                    }
+
+                    break;
                 }
-                break;
-            }
-            case 2:
-            {
-                if (Input.GetKeyDown(KeyCode.F))
+                case "Laptop":
                 {
-                    ((Laptop)_playerInventary.Items[1]).SwapPage();
-                
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        ((Laptop)_playerInventary.Items[_selectedItem-1]).SwapPage();
+
+                    }
+
+                    break;
                 }
-                break;
             }
         }
-       
     }
 }
