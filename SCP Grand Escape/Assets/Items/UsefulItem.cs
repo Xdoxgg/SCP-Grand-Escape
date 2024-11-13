@@ -53,7 +53,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         {
             case "Flashlight":
             {
-                _object.transform.position = _playerObject.transform.position+new Vector3(0.7f,0.2f,-1f);
+                _object.transform.position = _playerObject.transform.position+new Vector3(-0.1f,0.2f,-1f);
                 break;
             }
             case "Laptop":
