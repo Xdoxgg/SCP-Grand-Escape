@@ -119,3 +119,10 @@ obj/
 *.temp
 *.bak
 *.swp
+/SCP Grand Escape/Library/
+/SCP Grand Escape/Logs/
+/SCP Grand Escape/obj/
+/SCP Grand Escape/Packages/
+/SCP Grand Escape/ProjectSettings/
+/SCP Grand Escape/UserSettings/
+/SCP Grand Escape/Temp/
