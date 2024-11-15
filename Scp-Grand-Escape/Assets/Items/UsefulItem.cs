@@ -52,24 +52,6 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         _object.transform.rotation = _playerObject.transform.rotation;
        _object.transform.position = _playerObject.transform.position;
        
-        Vector3 position;
-        // switch (_name)
-        // {
-        //     case "Flashlight":
-        //     {
-        //         position=new Vector3(-0.1f,0.2f,-1f);
-        //         _object.transform.position = _playerObject.transform.position+position;
-        //         
-        //         break;
-        //     }
-        //     case "Laptop":
-        //     {
-        //         _object.transform.position = _playerObject.transform.position+new Vector3(0.69f,0.6f,-0.8f);
-        //         break;
-        //     }
-        // }
-       // Debug.Log(_object.transform.position );
-       
     }
 
     public string GetDesciption()

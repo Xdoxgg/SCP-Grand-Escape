@@ -19,7 +19,13 @@ public class Laptop : UsefulItem
     public Laptop()
     {
         _activePage = 0;
+        
         Name= "Laptop";
+    }
+
+    private void Start()
+    {
+        _title.SetText(_pages[_activePage]);
     }
 
     public void SwapPage()
