@@ -41,8 +41,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         _object.SetActive(value);
    
     }
-
-
+    
     public void Interact()
     {
         _object.SetActive(false);
