@@ -70,3 +70,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/Scp-Grand-Escape/UserSettings/
+/Scp-Grand-Escape/obj/
+/Scp-Grand-Escape/Logs/
+/Scp-Grand-Escape/Library/
+/Scp-Grand-Escape/.idea/
+/.idea/
+*.idea
