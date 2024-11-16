@@ -38,7 +38,7 @@ public class DoorController : MonoBehaviour, IInteracteble
     {
         if (!_doorOpen && _startOpen)
         {
-            
+            //hello
         }
         
         
