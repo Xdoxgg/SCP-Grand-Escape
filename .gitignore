@@ -74,6 +74,33 @@ crashlytics-build.properties
 /Scp-Grand-Escape/obj/
 /Scp-Grand-Escape/Logs/
 /Scp-Grand-Escape/Library/
-/Scp-Grand-Escape/.idea/
-/.idea/
+# Rider specific files
+.idea/
+*.sln.iml
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# Rider caches
+.idea/
+*.sln.iml
+*.dotCover
+*.dotTrace
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
 
