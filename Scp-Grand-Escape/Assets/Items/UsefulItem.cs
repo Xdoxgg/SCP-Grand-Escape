@@ -49,7 +49,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         _playerInventary.AddItem(this);
      
         _object.transform.parent = _playerObject.transform;
-        _object.transform.rotation = _name!="Flashlight"?_playerObject.transform.rotation:_playerObject.transform.rotation;
+        _object.transform.rotation = _playerObject.transform.rotation;
         _object.transform.position = _playerObject.transform.position;
        
     }
