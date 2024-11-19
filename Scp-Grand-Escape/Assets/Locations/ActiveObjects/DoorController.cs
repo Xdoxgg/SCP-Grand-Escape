@@ -18,6 +18,7 @@ public class DoorController : MonoBehaviour, IInteracteble
     public DoorController()
     {
         _doorOpen = false;
+        _startOpen = false;
     }
 
     public void Interact()
@@ -27,18 +28,29 @@ public class DoorController : MonoBehaviour, IInteracteble
         //     _door1.transform.position += new Vector3(0.5f,0f,0f);
         //     _door2.transform.position -= new Vector3(0.5f,0f,0f);
         // }
-        //
-        // // _door1.SetActive(_doorOpen);
-        // // _door2.SetActive(_doorOpen);
-        // _doorOpen = !_doorOpen;
+        
+        // _door1.SetActive(_doorOpen);
+        // _door2.SetActive(_doorOpen);
+        _doorOpen = !_doorOpen;
         _startOpen = !_startOpen;
     }
 
-    public void Update()
+    void Update()
     {
-        if (!_doorOpen && _startOpen)
+        
+        if ( _startOpen)
         {
-            //hello
+            if (_door1.transform.position.z>=4f-5f)
+            {
+                _door1.transform.position-= new Vector3(0f,0f,1f);
+                Debug.Log("point");
+            }
+            else
+            {
+                _door1.SetActive(false);
+                _startOpen = false;
+            }
+            
         }
         
         
