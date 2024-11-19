@@ -48,7 +48,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         _inInventary = true;
         _playerInventary.AddItem(this);
         _rigidbody.useGravity = false;
-        _rigidbody.freezeRotation = true;
+       _rigidbody.freezeRotation = true;
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         
