@@ -16,7 +16,6 @@ public class MovingControl : MonoBehaviour
     private Vector3 _velocity;
     private bool _run;
 
-
     void Avake()
     {
         _controller = GetComponent<CharacterController>();
@@ -24,6 +23,7 @@ public class MovingControl : MonoBehaviour
 
 	private void Start()
 	{
+        
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 	}
@@ -35,6 +35,9 @@ public class MovingControl : MonoBehaviour
 		if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
         {
             Jump();
+            
+            
+            
         }
   
         if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
@@ -42,7 +45,7 @@ public class MovingControl : MonoBehaviour
           
         }
 
-        if (_stats.ReadyToRun && Input.GetKey(KeyCode.LeftShift) && _controller.isGrounded && !Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
+        if (_stats.ReadyToRun && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
         {
             _moveSpeed = 6.0f; 
             _run = true;

@@ -14,7 +14,7 @@ public class UsefulItem : MonoBehaviour, IInteracteble
 
     [SerializeField] private bool _inInventary;
     [SerializeField] private GameObject _playerObject;
-
+    [SerializeField] private Rigidbody _rigidbody;
     public bool InInventary
     {
         get { return this._inInventary; }
@@ -47,7 +47,11 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         _object.SetActive(false);
         _inInventary = true;
         _playerInventary.AddItem(this);
-     
+        _rigidbody.useGravity = false;
+        _rigidbody.freezeRotation = true;
+        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+        
         _object.transform.parent = _playerObject.transform;
         _object.transform.rotation = _playerObject.transform.rotation;
         _object.transform.position = _playerObject.transform.position;
