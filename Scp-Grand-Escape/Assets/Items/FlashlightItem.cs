@@ -7,6 +7,7 @@ public class FlashlightItem : UsefulItem
 {
     [SerializeField] private GameObject _light;
     private bool _isActive;
+   
 
     public FlashlightItem()
     {
