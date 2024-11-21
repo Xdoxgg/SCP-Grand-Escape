@@ -76,7 +76,7 @@ public class DoorController : MonoBehaviour, IInteracteble
         }
         else
         {
-            return "for " + (_doorOpen ? "Close" : "Open") + " door you need " + _acceptLevel.ToString() +
+            return "for " + (_doorOpen ? "close" : "open") + " door you need " + _acceptLevel.ToString() +
                    "  key card level";
         }
     }
