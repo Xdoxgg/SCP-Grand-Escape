@@ -27,6 +27,10 @@ public class PlayerInventary : MonoBehaviour
     public PlayerInventary()
     {
         _items = new UsefulItem[4];
+        for (int i = 0; i < _items.Length; i++)
+        {
+            _items[i] = null;
+        }
     }
 
     public UsefulItem[] Items
