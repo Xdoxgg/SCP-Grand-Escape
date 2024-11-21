@@ -106,8 +106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.8258591, y: 2.489103, z: 2.6257203}
+  m_Center: {x: 0.023738861, y: 0.067718625, z: 0.0018493831}
 --- !u!114 &8137782393255331264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +123,8 @@ MonoBehaviour:
   _doorOpen: 0
   _doorAnimation1: {fileID: 6992195970715099600}
   _doorAnimation2: {fileID: 4345704510449352792}
+  _acceptLevel: 0
+  _playerInventary: {fileID: 0}
 --- !u!1 &4394917809478517863
 GameObject:
   m_ObjectHideFlags: 0

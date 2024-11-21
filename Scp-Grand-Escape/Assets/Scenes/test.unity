@@ -124626,10 +124626,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8137782393255331264, guid: 9f693bd852f8b2c40858623caf7dd7a9, type: 3}
-      propertyPath: _acceptLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137782393255331264, guid: 9f693bd852f8b2c40858623caf7dd7a9, type: 3}
       propertyPath: _playerInventary
       value: 
       objectReference: {fileID: 2046250043}
