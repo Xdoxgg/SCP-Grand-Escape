@@ -24,6 +24,14 @@ public class PlayerInventary : MonoBehaviour
         _ui.RenameButtons();
     }
 
+    public void RemoveItem(int index)
+    {
+        for (int i = 0; i < _items.Length; i++)
+        {
+             
+        }
+    }
+
     public PlayerInventary()
     {
         _items = new UsefulItem[4];
