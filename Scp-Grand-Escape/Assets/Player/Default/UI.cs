@@ -29,9 +29,7 @@ public class UI : MonoBehaviour
         _inventoryOpen = false;
          for (int i = 0; i < _playerInventary.Items.Length; i++)
          {
-             string text=_playerInventary.Items[i]==null?"none":_playerInventary.Items[i].Name;
-             
-             SetText(_itemButtonsTexts[i], text);
+             SetText(_itemButtonsTexts[i], _playerInventary.Items[i]==null?"none":_playerInventary.Items[i].Name);
          }
 
     }

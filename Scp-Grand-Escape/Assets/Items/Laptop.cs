@@ -25,7 +25,14 @@ public class Laptop : UsefulItem
 
     private void Start()
     {
-        _title.SetText(_pages[_activePage]);
+        if (_pages.Length > 0)
+        {
+            _title.SetText(_pages[_activePage]);
+        }
+        else
+        {
+            _title.SetText("no data...");
+        }
     }
 
     public void SwapPage()
