@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class PlayerInventary : MonoBehaviour
 {
     [SerializeField] private UsefulItem[] _items;
-
+    [SerializeField] private GameObject _dropPosition;
     [SerializeField] private UI _ui;
+    [SerializeField] private GameObject _globalObject;
     private bool _freePlace;
 
 
@@ -17,7 +19,15 @@ public class PlayerInventary : MonoBehaviour
         int items = 0;
         for (int i = 0; i < _items.Length; i++)
         {
-            items += (_items[i] == null) ? 0 : 1;
+            if (_items[i] == null)
+            {
+                break;
+            }
+            else
+            {
+                items++;
+            }
+
         }
     
         _items[items] = item;
@@ -26,10 +36,20 @@ public class PlayerInventary : MonoBehaviour
 
     public void RemoveItem(int index)
     {
-        for (int i = 0; i < _items.Length; i++)
-        {
-             
-        }
+        var item = _items[index];
+        _items[index] = null;
+        _ui.RenameButtons();
+        item.transform.localScale = item.DefaultScale;
+       
+        item.transform.parent = _globalObject.transform;
+        item.transform.rotation = _dropPosition.transform.rotation;
+        item.transform.position = _dropPosition.transform.position;
+        item.SetActive(true);
+        item.InInventary = false;
+        item.Rigidbody.useGravity = true;
+        item.Rigidbody.freezeRotation = false;
+        item.Rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.None;
+    
     }
 
     public PlayerInventary()

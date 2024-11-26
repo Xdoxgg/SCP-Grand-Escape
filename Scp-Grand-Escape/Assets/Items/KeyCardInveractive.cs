@@ -11,6 +11,12 @@ public class KeyCardInveractive : UsefulItem
         
     }
 
+    public override void UpdateLavel()
+    {
+        base.UpdateLavel();
+        _accept++;
+    }
+
     public int Accept
     {
         get { return _accept; }

@@ -23,6 +23,18 @@ public class Laptop : UsefulItem
         Name= "Laptop";
     }
 
+    public override void Interact()
+    {
+        base.Interact();
+        _object.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+    }
+
+    public override void UpdateLavel()
+    {
+        base.UpdateLavel();
+        //add somethink
+    }
+
     private void Start()
     {
         if (_pages.Length > 0)

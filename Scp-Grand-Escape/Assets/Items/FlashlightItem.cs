@@ -7,7 +7,7 @@ public class FlashlightItem : UsefulItem
 {
     [SerializeField] private GameObject _light;
     private bool _isActive;
-   
+    
 
     public FlashlightItem()
     {
@@ -15,6 +15,17 @@ public class FlashlightItem : UsefulItem
         Name = "Flashlight";
     }
 
+    public override void Interact()
+    {
+        base.Interact();
+        _object.transform.localScale= new Vector3(0.1f, 0.1f, 0.1f);
+    }
+
+
+    public override void UpdateLavel()
+    {
+        base.UpdateLavel();
+    }
 
     public void ToggleFlashlight()
     {

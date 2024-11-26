@@ -20,6 +20,17 @@ public class UI : MonoBehaviour
     [SerializeField] private PlayerInventary _playerInventary;
     [SerializeField] private int _selectedItem;
 
+    public int SelectedItem
+    {
+        get { return _selectedItem; }
+        set { _selectedItem = value; }
+    }
+
+    public PlayerInventary PlayerInventary
+    {
+        get { return _playerInventary; }
+        
+    }
 
     private void Start()
     {
