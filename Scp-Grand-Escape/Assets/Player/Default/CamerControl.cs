@@ -8,7 +8,9 @@ public class CameraController : MonoBehaviour
     public float mouseSensetive = 2.0f;
     public float maxYAngle = 80.0f;
     private float _rotationX = 0.0f;
+   
 
+  
 
     void Update()
     {
