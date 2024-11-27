@@ -1,0 +1,973 @@
+# Blender MTL File: '914.blend'
+# Material Count: 108
+
+newmtl None
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_914labels_1.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd D:\Secure. Contain. Protect (2)\Assets\Shortcuts\914labels 1.jpg
+
+newmtl None_914labels_intake.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd D:\Secure. Contain. Protect (2)\Assets\Shortcuts\914labels intake.jpg
+
+newmtl None_914panel.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\914panel.jpg
+
+newmtl None_NONE
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl None_dirtymetal.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.004
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.005
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.006
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.007
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.008
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.009
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.010
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.011
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.012
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.013
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.014
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.016
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.017
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.018
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.019
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.020
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.021
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.022
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.023
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.024
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.025
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.026
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.027
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.028
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_dirtymetal.jpg.029
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\dirtymetal.jpg
+
+newmtl None_gears.jpg.006
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.007
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.008
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.009
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.010
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.011
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.012
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.013
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.014
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.015
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.016
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.017
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.018
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.019
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.020
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.021
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.022
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.023
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.024
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.025
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.026
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.027
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.028
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.030
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.031
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.032
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.033
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.034
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.035
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.036
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.037
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.038
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.039
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.042
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.043
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.044
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.045
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.046
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.047
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.048
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.049
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.050
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.051
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.052
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.053
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.054
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.055
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.056
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.057
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.058
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.059
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.060
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.061
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.062
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.063
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.064
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.065
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.066
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.067
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.068
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.069
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.070
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.071
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.072
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.073
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.074
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.075
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.076
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.077
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.078
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.079
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.080
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.081
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.082
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.083
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.085
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
+
+newmtl None_gears.jpg.086
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd Games\SCP - Containment Breach Ultimate Edition v5.1.1\GFX\map\gears.jpg
