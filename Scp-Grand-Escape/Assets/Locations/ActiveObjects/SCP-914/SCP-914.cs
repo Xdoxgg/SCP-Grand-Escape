@@ -13,16 +13,20 @@ public class SCP914 : MonoBehaviour, IInteracteble
     
     public void Interact()
     {
-        _usefulItem = _platformEnter.UsefulItem;
-        _usefulItem.UpdateLavel();
-       
-        _platformEnd.UsefulItem=_usefulItem;
-        
+        if (_platformEnter.UsefulItem != null)
+        {
+          
+            _usefulItem = _platformEnter.UsefulItem;
+            _platformEnter.UsefulItem = null;
+            _usefulItem.UpdateLavel();
+
+            _platformEnd.UsefulItem = _usefulItem;
+        }
     }
 
     public string GetDesciption()
     {
-        return "Active";
+        return "Activate";
     }
 
     public bool IsInventereble()

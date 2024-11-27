@@ -34,12 +34,13 @@ public class UsefulItem : MonoBehaviour, IInteracteble
     public int Lavel
     {
         get { return _lavel; }
-        set { _lavel = value; }
+        //set { _lavel = value; }
     }
 
     public int MaxLavel
     {
         get { return _maxLavel; }
+        set { _maxLavel = value; }
     }
 
     public virtual void UpdateLavel()

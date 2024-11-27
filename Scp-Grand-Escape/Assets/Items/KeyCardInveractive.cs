@@ -8,13 +8,13 @@ public class KeyCardInveractive : UsefulItem
     public KeyCardInveractive()
     {
         this.Name = "KeyCard";
-        
+        MaxLavel = 3;
     }
 
     public override void UpdateLavel()
     {
         base.UpdateLavel();
-        _accept++;
+        _accept = Lavel;
     }
 
     public int Accept

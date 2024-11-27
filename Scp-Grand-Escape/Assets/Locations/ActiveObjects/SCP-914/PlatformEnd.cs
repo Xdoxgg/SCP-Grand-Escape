@@ -6,7 +6,7 @@ public class PlatformEnd : MonoBehaviour, IInteracteble
     [SerializeField] private GameObject _platform;
     [SerializeField] private GameObject _position;
     [SerializeField] private UsefulItem _usefulItem;
-    [SerializeField] private PlatformEnter _platformEnter;
+    
 
     public UsefulItem UsefulItem
     {
@@ -17,7 +17,6 @@ public class PlatformEnd : MonoBehaviour, IInteracteble
             _usefulItem.transform.parent = _platform.transform;
             _usefulItem.transform.rotation = _position.transform.rotation;
             _usefulItem.transform.position = _position.transform.position;
-            _platformEnter.Seted = false;
         }
     }
     

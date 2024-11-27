@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,9 +11,22 @@ public class PlatformEnter : MonoBehaviour, IInteracteble
     [SerializeField] private UI _playerUI;
     private bool _seted = false;
 
+    private void Update()
+    {
+        if (_usefulItem != null)
+        {
+            if (_usefulItem.InInventary == true)
+            {
+                _usefulItem = null;
+                _seted = false;
+            }
+        }
+    }
+
     public UsefulItem UsefulItem
     {
         get { return _usefulItem; }
+        set { _usefulItem = value; }
     }
 
     public bool Seted
