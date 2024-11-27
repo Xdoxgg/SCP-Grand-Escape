@@ -39,7 +39,7 @@ public class PlatformEnter : MonoBehaviour, IInteracteble
         if (_playerUI.SelectedItem != 0)
         {
             _usefulItem = _playerUI.PlayerInventary.Items[_playerUI.SelectedItem - 1];
-           
+            
         }
         if (_usefulItem != null && !_seted)
         {
@@ -49,6 +49,7 @@ public class PlatformEnter : MonoBehaviour, IInteracteble
             _usefulItem.transform.rotation = _position.transform.rotation;
             _usefulItem.transform.position = _position.transform.position;
             _seted = true;
+            _playerUI.SelectedItem = 0;
         }
     }
 

@@ -21,7 +21,6 @@ public class Playerstats : MonoBehaviour
     {
         _runCoolDown = new System.Timers.Timer();
         _staminaState = 100.0f;
-        // _healthState = 100.0f;
         _runCoolDown.Interval = 5000;
         _runCoolDown.Elapsed += OnTimedEvent;
         _readyToRun = true;
