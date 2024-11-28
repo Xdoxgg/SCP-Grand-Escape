@@ -2327,15 +2327,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.58
+      value: -11.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.233
+      value: 5.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.614
+      value: -10.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2372,6 +2372,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
       propertyPath: m_Name
       value: SCP173
+      objectReference: {fileID: 0}
+    - target: {fileID: 990012095079990719, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990012095079990719, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 990012095079990719, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990012095079990719, guid: 278b6a2cbfd0d6c4ca21dbf0c89d7111, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -124952,13 +124968,13 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 14
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 400
+  m_AngularSpeed: 4000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
@@ -125232,6 +125248,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1800573930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800573931}
+  m_Layer: 0
+  m_Name: Point (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1800573931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800573930}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.987, y: 6.43, z: -10.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1857956471 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1185450299923593266, guid: 74c39fd5e11d7224db93a1ae616e3120, type: 3}
@@ -125482,5 +125529,6 @@ SceneRoots:
   - {fileID: 1481405081}
   - {fileID: 1003715277}
   - {fileID: 1444383942}
+  - {fileID: 1800573931}
   - {fileID: 316486674}
   - {fileID: 1075051965}
