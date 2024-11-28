@@ -6,24 +6,25 @@ using Random = UnityEngine.Random;
 public class SCP : MonoBehaviour
 {
     [SerializeField] protected Transform[] _points;
-    protected Transform _currentPoint;
+    [SerializeField] protected Transform _currentPoint;
     [SerializeField] protected GameObject _scp;
     [SerializeField] protected GameObject _player;
     [SerializeField] protected NavMeshAgent _navMeshAgent;
     [SerializeField] protected string _name;
+
     private enum Mode
     {
         potrul,
         player
     }
-    
+
     private Mode _mode = Mode.potrul;
 
     void Start()
     {
         GoToPoint();
     }
-    
+
     private void Update()
     {
         if ((transform.position - _currentPoint.position).magnitude < 5f)
@@ -34,7 +35,6 @@ public class SCP : MonoBehaviour
 
     private void FixedUpdate()
     {
-       
         RaycastHit hit;
         if (Physics.Raycast(transform.position, _player.transform.position - transform.position, out hit, 100f))
         {
@@ -51,14 +51,12 @@ public class SCP : MonoBehaviour
 
         if (_mode == Mode.player)
         {
-           
             _navMeshAgent.SetDestination(_player.transform.position);
         }
     }
 
     void DisableWalkToPlayer()
     {
-        
         RaycastHit hit;
         if (Physics.Raycast(transform.position, _player.transform.position - transform.position, out hit, 100f))
         {
@@ -76,8 +74,6 @@ public class SCP : MonoBehaviour
 
     private void GoToPoint()
     {
-       
-        
         _currentPoint = _points[Random.Range(0, _points.Length)];
         _navMeshAgent.SetDestination(_currentPoint.position);
     }
