@@ -10,8 +10,7 @@ public class SCP : MonoBehaviour
     [SerializeField] protected GameObject _scp;
     [SerializeField] protected GameObject _player;
     [SerializeField] protected NavMeshAgent _navMeshAgent;
-
-    [SerializeField]
+    [SerializeField] protected string _name;
     private enum Mode
     {
         potrul,
@@ -35,8 +34,7 @@ public class SCP : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float distance =
-            Vector3.Distance((_player.transform.position - transform.position).normalized, transform.forward);
+       
         RaycastHit hit;
         if (Physics.Raycast(transform.position, _player.transform.position - transform.position, out hit, 100f))
         {
@@ -53,12 +51,14 @@ public class SCP : MonoBehaviour
 
         if (_mode == Mode.player)
         {
+           
             _navMeshAgent.SetDestination(_player.transform.position);
         }
     }
 
     void DisableWalkToPlayer()
     {
+        
         RaycastHit hit;
         if (Physics.Raycast(transform.position, _player.transform.position - transform.position, out hit, 100f))
         {
@@ -76,6 +76,8 @@ public class SCP : MonoBehaviour
 
     private void GoToPoint()
     {
+       
+        
         _currentPoint = _points[Random.Range(0, _points.Length)];
         _navMeshAgent.SetDestination(_currentPoint.position);
     }
