@@ -10,33 +10,64 @@ public class SCP173Control : MonoBehaviour
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private GameObject _player;
     [SerializeField] private NavMeshAgent _navMeshAgent;
-
+    [SerializeField] private DoorTrigger _trigger;
 
     void Start()
     {
         _navMeshAgent.autoBraking = false;
+        _navMeshAgent.isStopped = true;
     }
-    
+
     void Update()
     {
-     
-        
-        if (_navMeshAgent.isActiveAndEnabled)
+        if (_navMeshAgent.isActiveAndEnabled && _trigger.Ready)
         {
             Vector3 viewportPoint = _playerCamera.WorldToViewportPoint(_scp173.transform.position);
 
-            if (viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1 &&
-                viewportPoint.z > 0)
+            // if (viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1 &&
+            //     viewportPoint.z > 0)
+            // {
+            //   
+            //     
+            //     _navMeshAgent.isStopped = true;
+            //     _navMeshAgent.velocity = Vector3.zero;
+            //
+            // }
+            // else
+            // {
+            //     _navMeshAgent.isStopped = false;
+            // }
+            // float raycastWidth = 360f;
+            bool find = false;
+            float raycastDistance = 15f;
+            float raycastWidth = 6f;
+            for (float x = -raycastWidth / 2; x <= raycastWidth / 2; x += 0.5f)
+            {
+                Vector3 rayOrigin = _playerCamera.transform.position;
+                Vector3 rayDirection = _playerCamera.transform.forward;
+                rayOrigin += _playerCamera.transform.right * x;
+
+                if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, raycastDistance))
+                {
+                    GameObject hitObject = hit.collider.gameObject;
+
+                    if (hitObject == _scp173)
+                    {
+                        find = true;
+                        break;
+                    }
+                }
+            }
+
+            if (find)
             {
                 _navMeshAgent.isStopped = true;
-                _navMeshAgent.velocity=Vector3.zero;
-                
+                _navMeshAgent.velocity = Vector3.zero;
             }
             else
             {
                 _navMeshAgent.isStopped = false;
             }
-
         }
     }
 }

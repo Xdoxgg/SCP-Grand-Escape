@@ -11,6 +11,14 @@ public class DoorController : MonoBehaviour, IInteracteble
     [SerializeField] Animator _doorAnimation2;
     [SerializeField] private int _acceptLevel;
     [SerializeField] private PlayerInventary _playerInventary;
+    [SerializeField] private bool _locked = false;
+    
+    public bool DoorOpen => _doorOpen;
+    public bool Locked
+    {
+        get { return _locked; }
+        set { _locked = value; }
+    }
 
     public bool IsInventereble()
     {
@@ -20,45 +28,43 @@ public class DoorController : MonoBehaviour, IInteracteble
 
     public void Interact()
     {
-        if (_acceptLevel == 0)
+        if (!_locked)
         {
-            _doorOpen = !_doorOpen;
-            if (_doorOpen)
+            if (_acceptLevel == 0)
             {
-                _doorAnimation1.SetBool("IsOpen", true);
-                _doorAnimation2.SetBool("IsOpen", true);
+                _doorOpen = !_doorOpen;
+                if (_doorOpen)
+                {
+                    _doorAnimation1.SetBool("IsOpen", true);
+                    _doorAnimation2.SetBool("IsOpen", true);
+                }
+                else
+                {
+                    _doorAnimation1.SetBool("IsOpen", false);
+                    _doorAnimation2.SetBool("IsOpen", false);
+                }
             }
             else
             {
-                _doorAnimation1.SetBool("IsOpen", false);
-                _doorAnimation2.SetBool("IsOpen", false);
-            }
-        }
-        else
-        {
-          
-            foreach (var item in _playerInventary.Items)
-            {
-                
-                if (item != null)
+                foreach (var item in _playerInventary.Items)
                 {
-                  
-                    if (item.Name == "KeyCard")
+                    if (item != null)
                     {
-                       
-                        if (((KeyCardInveractive)item).Accept >= _acceptLevel && item.isActiveAndEnabled)
+                        if (item.Name == "KeyCard")
                         {
-                          
-                            _doorOpen = !_doorOpen;
-                            if (_doorOpen)
+                            if (((KeyCardInveractive)item).Accept >= _acceptLevel && item.isActiveAndEnabled)
                             {
-                                _doorAnimation1.SetBool("IsOpen", true);
-                                _doorAnimation2.SetBool("IsOpen", true);
-                            }
-                            else
-                            {
-                                _doorAnimation1.SetBool("IsOpen", false);
-                                _doorAnimation2.SetBool("IsOpen", false);
+                                _doorOpen = !_doorOpen;
+                                if (_doorOpen)
+                                {
+                                    _doorAnimation1.SetBool("IsOpen", true);
+                                    _doorAnimation2.SetBool("IsOpen", true);
+                                }
+                                else
+                                {
+                                    _doorAnimation1.SetBool("IsOpen", false);
+                                    _doorAnimation2.SetBool("IsOpen", false);
+                                }
                             }
                         }
                     }
@@ -70,14 +76,22 @@ public class DoorController : MonoBehaviour, IInteracteble
 
     public string GetDesciption()
     {
-        if (_acceptLevel == 0)
+        if (!_locked)
         {
-            return _doorOpen ? "Close" : "Open";
+            if (_acceptLevel == 0)
+            {
+                return _doorOpen ? "Close" : "Open";
+            }
+            else
+            {
+                return "for " + (_doorOpen ? "close" : "open") + " door you need " + _acceptLevel.ToString() +
+                       "  key card level";
+            }
         }
         else
         {
-            return "for " + (_doorOpen ? "close" : "open") + " door you need " + _acceptLevel.ToString() +
-                   "  key card level";
+            return "Door locked";
         }
     }
+    
 }
