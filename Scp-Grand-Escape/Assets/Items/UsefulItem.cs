@@ -53,6 +53,11 @@ public class UsefulItem : MonoBehaviour, IInteracteble
         {
             _lavel = _maxLavel;
         }
+
+        if (_lavel > _maxLavel)
+        {
+            _lavel = _maxLavel;
+        }
     }
 
     public bool InInventary
