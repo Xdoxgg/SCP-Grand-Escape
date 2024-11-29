@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerInventary : MonoBehaviour
 {
     [SerializeField] private UsefulItem[] _items;
-    [SerializeField] private GameObject _dropPosition;
+   // [SerializeField] private GameObject _dropPosition;
     [SerializeField] private UI _ui;
     [SerializeField] private GameObject _globalObject;
     private bool _freePlace;
@@ -42,8 +42,8 @@ public class PlayerInventary : MonoBehaviour
         item.transform.localScale = item.DefaultScale;
        
         item.transform.parent = _globalObject.transform;
-        item.transform.rotation = _dropPosition.transform.rotation;
-        item.transform.position = _dropPosition.transform.position;
+        item.transform.rotation = _globalObject.transform.rotation;
+        item.transform.position = _globalObject.transform.position;
         item.SetActive(true);
         item.InInventary = false;
         item.Rigidbody.useGravity = true;
