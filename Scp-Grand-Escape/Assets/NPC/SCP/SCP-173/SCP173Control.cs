@@ -24,20 +24,7 @@ public class SCP173Control : MonoBehaviour
         {
             Vector3 viewportPoint = _playerCamera.WorldToViewportPoint(_scp173.transform.position);
 
-            // if (viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1 &&
-            //     viewportPoint.z > 0)
-            // {
-            //   
-            //     
-            //     _navMeshAgent.isStopped = true;
-            //     _navMeshAgent.velocity = Vector3.zero;
-            //
-            // }
-            // else
-            // {
-            //     _navMeshAgent.isStopped = false;
-            // }
-            // float raycastWidth = 360f;
+    
             bool find = false;
             float raycastDistance = 15f;
             float raycastWidth = 6f;

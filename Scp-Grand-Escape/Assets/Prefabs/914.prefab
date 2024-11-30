@@ -64,7 +64,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 155889213113727866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9a75337d6b32f4780d6deff36ddce7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f60beb354717ec4ca57cee60ee236e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _object: {fileID: 155889213113727866}
@@ -813,7 +813,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 7741625113677808684, guid: 8e30d029eed5c9b4aba02148609d6c99, type: 3}
-  - {fileID: -7486039099930175673, guid: 8e30d029eed5c9b4aba02148609d6c99, type: 3}
+  - {fileID: 2100000, guid: 9f0953c0dd7c2b3418972f2b84bfddda, type: 2}
   - {fileID: 8647997630085968602, guid: 8e30d029eed5c9b4aba02148609d6c99, type: 3}
   - {fileID: 1798259233985948278, guid: 8e30d029eed5c9b4aba02148609d6c99, type: 3}
   - {fileID: 6764752522404175964, guid: 8e30d029eed5c9b4aba02148609d6c99, type: 3}

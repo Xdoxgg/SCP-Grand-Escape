@@ -8,13 +8,21 @@ public class ElevatorController : MonoBehaviour, IInteracteble
     [SerializeField] private Animator _animatorMain;
     [SerializeField] private Animator _animator1;
     [SerializeField] private Animator _animator2;
-
+    [SerializeField] private bool _started = false;
     private enum Mode
     {
         up,
         down
     }
 
+    void Start()
+    {
+        if (_started)
+        {
+            Interact();
+        }
+    }
+    
     [SerializeField] private Mode _mode;
 
     public void Interact()
