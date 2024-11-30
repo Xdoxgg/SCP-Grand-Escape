@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class ElevatorController : MonoBehaviour, IInteracteble
 {
-    [SerializeField] private DoorController _liftDoor;
-    [SerializeField] private GameObject _playerObject;
+    [SerializeField] private Animator _animatorMain;
+    [SerializeField] private Animator _animator1;
+    [SerializeField] private Animator _animator2;
 
     private enum Mode
     {
@@ -18,35 +19,28 @@ public class ElevatorController : MonoBehaviour, IInteracteble
 
     public void Interact()
     {
-        if (_liftDoor.DoorOpen == false)
+        if (_mode == Mode.up)
         {
-            if (_mode == Mode.up)
-            {
-                _playerObject.transform.position = new Vector3(_playerObject.transform.position.x,
-                    _playerObject.transform.position.y + 40.5f, transform.position.z);
-                _mode = Mode.down;
-                Debug.Log("Active up");
-            }
-            else
-            {
-                _playerObject.transform.position = new Vector3(_playerObject.transform.position.x,
-                    _playerObject.transform.position.y - 18.5f, transform.position.z);
-                _mode = Mode.up;
-                Debug.Log("Active down");
-            }
+            _animator1.SetBool("Start", true);
+            _animator2.SetBool("Start", true);
+      
+            _animatorMain.SetBool("MoveUp", true);
+            _mode = Mode.down;
         }
+        else
+        {
+            _animator1.SetBool("Start", false);
+            _animator2.SetBool("Start", false);
+
+            _animatorMain.SetBool("MoveUp", false);
+            _mode = Mode.up;
+        }
+    
     }
 
     public string GetDesciption()
     {
-        if (!_liftDoor.DoorOpen)
-        {
-            return "Go " + _mode.ToString();
-        }
-        else
-        {
-            return "Firstly close doors";
-        }
+        return "Firstly close doors";
     }
 
     public bool IsInventereble()
