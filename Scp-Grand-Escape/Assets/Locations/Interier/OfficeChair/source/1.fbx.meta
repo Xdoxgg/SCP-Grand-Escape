@@ -3,7 +3,27 @@ guid: 24d42b63123507748ab78cb9e141262e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackMetal
+    second: {fileID: 2100000, guid: 38d62015a52733c4f83be59494ca621b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chrome
+    second: {fileID: 2100000, guid: 4ffbe0a66e61d774fa01789973fe4f7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lether
+    second: {fileID: 2100000, guid: 2a496c9fb06b50f41aafbaab39327e52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Matteplastic
+    second: {fileID: 2100000, guid: 164f5cc64a61bb2428408597d0bb510f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +110,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.015
+    globalScale: 1.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
