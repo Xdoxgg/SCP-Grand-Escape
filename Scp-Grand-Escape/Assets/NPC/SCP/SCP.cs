@@ -11,7 +11,7 @@ public class SCP : MonoBehaviour
     [SerializeField] protected GameObject _player;
     [SerializeField] protected NavMeshAgent _navMeshAgent;
     [SerializeField] protected string _name;
-
+   
     private enum Mode
     {
         potrul,
@@ -77,4 +77,7 @@ public class SCP : MonoBehaviour
         _currentPoint = _points[Random.Range(0, _points.Length)];
         _navMeshAgent.SetDestination(_currentPoint.position);
     }
+
+  
+    
 }

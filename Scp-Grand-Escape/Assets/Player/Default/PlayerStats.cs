@@ -7,19 +7,26 @@ using UnityEngine;
 
 public class Playerstats : MonoBehaviour
 {
-    //[SerializeField]
-    //private float _healthState;
+    [SerializeField]
+    private float _healthState;
     [SerializeField]
     private float _staminaState;
     private bool _readyToRun;
     [SerializeField]
     private MovingControl _player;
     private System.Timers.Timer _runCoolDown;
+    [SerializeField] private Rigidbody _rigidbody;
 
+    public float Health
+    {
+        get { return _healthState; }
+        set { _healthState = value; }
+    }
     
     void Start()
     {
         _runCoolDown = new System.Timers.Timer();
+        _healthState = 100f;
         _staminaState = 100.0f;
         _runCoolDown.Interval = 5000;
         _runCoolDown.Elapsed += OnTimedEvent;
@@ -33,26 +40,37 @@ public class Playerstats : MonoBehaviour
 
     private void Update()
     {
-        if (_staminaState < 20)
+        if (_healthState > 0)
         {
-            _readyToRun = false;
-            _runCoolDown.Start();
-        }
-        if (_player.Runing && _readyToRun)
-        {
-            _staminaState -= 10 * Time.deltaTime;
-        }
-
-        if (!_player.Runing)
-        {
-            if (_staminaState + (2 * Time.deltaTime) <= 100)
+            if (_staminaState < 20)
             {
-                _staminaState += 2 * Time.deltaTime;
-                if (_staminaState >= 99f)
+                _readyToRun = false;
+                _runCoolDown.Start();
+            }
+
+            if (_player.Runing && _readyToRun)
+            {
+                _staminaState -= 10 * Time.deltaTime;
+            }
+
+            if (!_player.Runing)
+            {
+                if (_staminaState + (2 * Time.deltaTime) <= 100)
                 {
-                    _staminaState = 100f;
+                    _staminaState += 2 * Time.deltaTime;
+                    if (_staminaState >= 99f)
+                    {
+                        _staminaState = 100f;
+                    }
                 }
             }
+        }
+        else
+        {
+            _rigidbody.useGravity = true;
+            _rigidbody.freezeRotation = false;
+            _rigidbody = GetComponent<Rigidbody>();
+            _rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.None;
         }
     }
 

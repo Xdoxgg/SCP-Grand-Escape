@@ -6,12 +6,13 @@ using System.Timers;
 
 public class SCP173Control : MonoBehaviour
 {
+    [SerializeField]private Playerstats _playerstats;
     [SerializeField] private GameObject _scp173;
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private GameObject _player;
     [SerializeField] private NavMeshAgent _navMeshAgent;
     [SerializeField] private DoorTrigger _trigger;
-
+    private float _damage=100f;
     void Start()
     {
         _navMeshAgent.autoBraking = false;
@@ -26,7 +27,7 @@ public class SCP173Control : MonoBehaviour
 
     
             bool find = false;
-            float raycastDistance = 15f;
+            float raycastDistance = 40f;
             float raycastWidth = 6f;
             for (float x = -raycastWidth / 2; x <= raycastWidth / 2; x += 0.5f)
             {
@@ -54,6 +55,13 @@ public class SCP173Control : MonoBehaviour
             else
             {
                 _navMeshAgent.isStopped = false;
+                if((transform.position - _player.transform.position).magnitude < 2f)
+                {
+                    _playerstats.Health -= _damage;
+                }
+                
+                
+                
             }
         }
     }

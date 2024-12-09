@@ -30,37 +30,41 @@ public class MovingControl : MonoBehaviour
 
 	void Update()
     {
-		
-	
-		if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
+        if (_stats.Health > 0)
         {
-            Jump();
-            
-            
-            
-        }
-  
-        if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
-        {
-          
-        }
 
-        if (_stats.ReadyToRun && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))
-        {
-            _moveSpeed = 6.0f; 
-            _run = true;
+            if (Input.GetKey(KeyCode.Space) && _controller.isGrounded)
+            {
+                Jump();
+
+
+
+            }
+
+            if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
+            {
+
+            }
+
+            if (_stats.ReadyToRun && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl) &&
+                Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) &&
+                !Input.GetKey(KeyCode.D))
+            {
+                _moveSpeed = 6.0f;
+                _run = true;
+            }
+            else
+            {
+                _moveSpeed = 3.0f;
+                _run = false;
+            }
+
+            float horisontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            Vector3 moveDeraction = transform.forward * verticalInput + transform.right * horisontalInput;
+            moveDeraction.y -= 9.81f * Time.deltaTime;
+            _controller.Move(moveDeraction * _moveSpeed * Time.deltaTime);
         }
-        else
-        {
-            _moveSpeed = 3.0f;
-            _run=false;
-        }
-        
-        float horisontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        Vector3 moveDeraction = transform.forward * verticalInput + transform.right * horisontalInput;
-        moveDeraction.y -= 9.81f * Time.deltaTime;
-        _controller.Move(moveDeraction * _moveSpeed * Time.deltaTime);
     }
 
     private void FixedUpdate()

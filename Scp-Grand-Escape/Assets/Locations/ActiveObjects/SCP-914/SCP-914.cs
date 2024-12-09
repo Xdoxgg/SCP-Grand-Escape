@@ -48,8 +48,7 @@ public class SCP914 : MonoBehaviour, IInteracteble
             _doorAnimation1.SetBool("IsOpen", true);
             _doorAnimation2.SetBool("IsOpen", true);
             _timer.Start();
-            Debug.Log("Start");
-            Debug.Log(_timer.Interval);
+           
             _usefulItem = _platformEnter.UsefulItem;
             _platformEnter.UsefulItem = null;
             _usefulItem.UpdateLavel();
