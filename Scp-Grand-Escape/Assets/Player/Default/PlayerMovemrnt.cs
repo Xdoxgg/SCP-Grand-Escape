@@ -41,11 +41,6 @@ public class MovingControl : MonoBehaviour
 
             }
 
-            if (Input.GetKey(KeyCode.LeftControl) && _controller.isGrounded)
-            {
-
-            }
-
             if (_stats.ReadyToRun && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl) &&
                 Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) &&
                 !Input.GetKey(KeyCode.D))

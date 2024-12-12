@@ -1,19 +1,47 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Timers;
 
-public class DropTrigger:MonoBehaviour
+public class DropTrigger : MonoBehaviour
 {
-    [SerializeField] private DoorController _door1;
-    [SerializeField] private DoorController _door2;
-    [SerializeField] private Animator _animator1;
-    [SerializeField] private Animator _animator2;
+    [SerializeField] private DoorController _doorController1;
+    [SerializeField] private DoorController _doorController2;
+    [SerializeField] private GameObject[] _offItems;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private int _time;
+    private bool _drop = false;
+    private Timer _timer;
 
-    private void Update()
+    void Start()
     {
-        if (_door1.DoorOpen || _door2.DoorOpen)
+        _timer = new Timer(_time);
+        _timer.AutoReset = false;
+        _timer.Elapsed += TimerElapsed;
+
+
+    }
+
+
+    void TimerElapsed(object sender, ElapsedEventArgs e)
+    {
+        _drop = true;
+    }
+
+    void Update()
+    {
+
+        if (!_drop && (_doorController1.DoorOpen || _doorController2.DoorOpen))
         {
-            _animator1.SetBool("Start", true);
-            _animator2.SetBool("Start", true);
+            _timer.Start();
         }
-}
+
+        if (_drop)
+        {
+            foreach (GameObject item in _offItems)
+            {
+                item.SetActive(false);
+            }
+         _animator.SetBool("Start", true);   
+        }
+    }
+    
 }
