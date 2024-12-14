@@ -61,4 +61,18 @@ public class Laptop : UsefulItem
         _title.SetText(_pages[_activePage]);
         
     }
+
+    public void AddPage(string data)
+    {
+        string[] temp=new string[_pages.Length + 1];
+        for (int i = 0; i < _pages.Length; i++)
+        {
+            temp[i] = _pages[i];
+        }
+        temp[_pages.Length] = data;
+        
+        _pages = temp;
+        
+    }
+    
 }
