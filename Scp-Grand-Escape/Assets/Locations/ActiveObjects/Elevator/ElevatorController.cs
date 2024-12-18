@@ -48,7 +48,7 @@ public class ElevatorController : MonoBehaviour, IInteracteble
 
     public string GetDesciption()
     {
-        return "Firstly close doors";
+        return "Activate elevator";
     }
 
     public bool IsInventereble()

@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
-using TMPro.EditorUtilities;
-using Unity.VisualScripting;
+//using TMPro.EditorUtilities;
+//using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Timers;
@@ -19,7 +19,7 @@ public class UI : MonoBehaviour
     [SerializeField] private bool _inventoryOpen;
     [SerializeField] private PlayerInventary _playerInventary;
     [SerializeField] private int _selectedItem;
-
+    [SerializeField] private CameraController _cameraController;
     public int SelectedItem
     {
         get { return _selectedItem; }
@@ -84,11 +84,19 @@ public class UI : MonoBehaviour
     }
 
 
-
+    
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace) && !_inventoryOpen)
+        if (_inventoryOpen || _menuOpen)
+        {
+            _cameraController.mouseSensetive = 0f;
+        }
+        else
+        {
+            _cameraController.mouseSensetive = 2f;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && !_inventoryOpen)
         {
             
             UnityEngine.Cursor.lockState = !_menuOpen ? CursorLockMode.None : CursorLockMode.Locked;
@@ -98,7 +106,7 @@ public class UI : MonoBehaviour
            
         }
 
-        if (Input.GetKeyDown(KeyCode.I) && !_menuOpen)
+        if (Input.GetKeyDown(KeyCode.Tab) && !_menuOpen)
         {
             UnityEngine.Cursor.lockState = !_inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
             UnityEngine.Cursor.visible = !_inventoryOpen;
